@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>气泡图</title>
+    <link href="/2021/09/29/qipao/"/>
+    <url>/2021/09/29/qipao/</url>
+    
+    <content type="html"><![CDATA[<figure class="highlight reasonml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs reasonml">library(ggplot2)<br>colors &lt;-c(<span class="hljs-string">&quot;#E41A1C&quot;</span>,<span class="hljs-string">&quot;#000000&quot;</span>,<span class="hljs-string">&quot;#FF8C00&quot;</span>,<span class="hljs-string">&quot;#4DAF4A&quot;</span>,<span class="hljs-string">&quot;#984EA3&quot;</span>,<br>           <span class="hljs-string">&quot;#40E0D0&quot;</span>)<br>Ap3.<span class="hljs-number">2</span>&lt;-read.csv(<span class="hljs-string">&quot;Ap3.2.csv&quot;</span>)<br>#Ap3.<span class="hljs-number">1</span>$SWA&lt;-factor(Ap3.<span class="hljs-number">1</span>$SWA,levels = c(<span class="hljs-string">&quot;PUT&quot;</span>,<span class="hljs-string">&quot;CAD&quot;</span>,<span class="hljs-string">&quot;HIS&quot;</span>,<br>#                                      <span class="hljs-string">&quot;SPD&quot;</span>,<span class="hljs-string">&quot;SPE&quot;</span>,<span class="hljs-string">&quot;BAs&quot;</span>))<br>Ap3.<span class="hljs-number">2</span>$samples&lt;-factor(Ap3.<span class="hljs-number">2</span>$samples,levels =c(<span class="hljs-string">&quot;b_1&quot;</span>,<span class="hljs-string">&quot;b_3&quot;</span>,<span class="hljs-string">&quot;b_5&quot;</span>,<span class="hljs-string">&quot;b_10&quot;</span>,<span class="hljs-string">&quot;b_20&quot;</span>,<span class="hljs-string">&quot;b_45&quot;</span>,                                              <span class="hljs-string">&quot;d_1&quot;</span>,<span class="hljs-string">&quot;d_3&quot;</span>,<span class="hljs-string">&quot;d_5&quot;</span>,<span class="hljs-string">&quot;d_10&quot;</span>,<span class="hljs-string">&quot;d_20&quot;</span>,<span class="hljs-string">&quot;d_45&quot;</span>))<br><br>p3 &lt;- ggplot(Ap3.<span class="hljs-number">2</span>, aes(samples,KO)) +<br>  geom<span class="hljs-constructor">_point(<span class="hljs-params">aes</span>(<span class="hljs-params">size</span> = KOsize,<span class="hljs-params">color</span>=SWA)</span>,show.legend = TRUE) +<br>  scale<span class="hljs-constructor">_size_continuous(<span class="hljs-params">range</span> = <span class="hljs-params">c</span>(1, 9)</span>) +<br>  scale<span class="hljs-constructor">_color_manual(<span class="hljs-params">values</span> = <span class="hljs-params">colors</span>)</span>+<br>  theme<span class="hljs-constructor">_bw()</span> +<br>  theme(panel.grid =element<span class="hljs-constructor">_blank()</span>)+<br>  theme(axis.text.x = element<span class="hljs-constructor">_text(<span class="hljs-params">angle</span> = 45, <span class="hljs-params">hjust</span> = 1, <span class="hljs-params">vjust</span> = 1)</span>) +<br>  labs(x = &#x27;&#x27;, y = &#x27;&#x27;)<br>p3<br></code></pre></div></td></tr></table></figure><p><img src="/2021/09/29/qipao/1.png"></p><p>#素材</p><p>#链接：<a href="https://pan.baidu.com/s/1rJRQra7fhkpc79cT3tRAEg">https://pan.baidu.com/s/1rJRQra7fhkpc79cT3tRAEg</a><br>#提取码：1111 </p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>lefse</title>
     <link href="/2021/09/29/lefse/"/>
     <url>/2021/09/29/lefse/</url>
