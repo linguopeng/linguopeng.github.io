@@ -236,7 +236,7 @@
             <h1 style="display: none">conda命令</h1>
             
             <div class="markdown-body">
-              <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-comment"># 下载最新版的miniconda3</span><br>wget https:<span class="hljs-regexp">//</span>repo.anaconda.com<span class="hljs-regexp">/miniconda/</span>Miniconda3-latest-Linux-x86_64.sh<br><span class="hljs-comment"># 运行安装程序</span><br>sh Miniconda3-latest-Linux-x86_64.sh<br><span class="hljs-comment">#查看环境、</span><br>conda env list<br><span class="hljs-comment">#删除环境</span><br>conda remove -n python3 --all<br><span class="hljs-comment">#激活环境</span><br>conda activate 环境名<br><span class="hljs-comment">#导出环境</span><br>conda env export --file qiime2-<span class="hljs-number">2019.7</span>.yml<br><span class="hljs-comment">#关闭工作环境</span><br>conda deactivate<br><span class="hljs-comment">#安装环境</span><br>conda env create -n qiime2-<span class="hljs-number">2019.7</span> --file qiime2-<span class="hljs-number">2019.7</span>.yml<br><span class="hljs-comment">#关于channels:</span><br><span class="hljs-comment">#配制anaconda镜像</span><br>conda config --add channels https:<span class="hljs-regexp">//mi</span>rrors.tuna.tsinghua.edu.cn<span class="hljs-regexp">/anaconda/</span>pkgs<span class="hljs-regexp">/free/</span><br>conda config --add channels https:<span class="hljs-regexp">//mi</span>rrors.tuna.tsinghua.edu.cn<span class="hljs-regexp">/anaconda/</span>pkgs<span class="hljs-regexp">/main/</span><br>conda config --add channels https:<span class="hljs-regexp">//mi</span>rrors.tuna.tsinghua.edu.cn<span class="hljs-regexp">/anaconda/</span>cloud<span class="hljs-regexp">/conda-forge/</span><br>conda config --add channels https:<span class="hljs-regexp">//mi</span>rrors.tuna.tsinghua.edu.cn<span class="hljs-regexp">/anaconda/</span>cloud<span class="hljs-regexp">/bioconda/</span><br>conda config --set show_channel_urls yes<br><span class="hljs-comment">#指定安装某个包</span><br>conda install python=<span class="hljs-number">3.7</span>.<span class="hljs-number">4</span><br><br></code></pre></td></tr></table></figure>
+              <figure class="highlight awk"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs awk"><span class="hljs-comment"># 下载最新版的miniconda3</span><br>wget https:<span class="hljs-regexp">//</span>repo.anaconda.com<span class="hljs-regexp">/miniconda/</span>Miniconda3-latest-Linux-x86_64.sh<br><span class="hljs-comment"># 运行安装程序</span><br>sh Miniconda3-latest-Linux-x86_64.sh<br><span class="hljs-comment">#查看环境、</span><br>conda env list<br><span class="hljs-comment">#删除环境</span><br>conda remove -n python3 --all<br><span class="hljs-comment">#激活环境</span><br>conda activate 环境名<br><span class="hljs-comment">#导出环境</span><br>conda env export --file qiime2-<span class="hljs-number">2019.7</span>.yml<br><span class="hljs-comment">#关闭工作环境</span><br>conda deactivate<br><span class="hljs-comment">#安装环境</span><br>conda env create -n qiime2-<span class="hljs-number">2019.7</span> --file qiime2-<span class="hljs-number">2019.7</span>.yml<br><span class="hljs-comment">#关于channels:</span><br><span class="hljs-comment">#配制anaconda镜像</span><br>conda config --add channels https:<span class="hljs-regexp">//mi</span>rrors.tuna.tsinghua.edu.cn<span class="hljs-regexp">/anaconda/</span>pkgs<span class="hljs-regexp">/free/</span><br>conda config --add channels https:<span class="hljs-regexp">//mi</span>rrors.tuna.tsinghua.edu.cn<span class="hljs-regexp">/anaconda/</span>pkgs<span class="hljs-regexp">/main/</span><br>conda config --add channels https:<span class="hljs-regexp">//mi</span>rrors.tuna.tsinghua.edu.cn<span class="hljs-regexp">/anaconda/</span>cloud<span class="hljs-regexp">/conda-forge/</span><br>conda config --add channels https:<span class="hljs-regexp">//mi</span>rrors.tuna.tsinghua.edu.cn<span class="hljs-regexp">/anaconda/</span>cloud<span class="hljs-regexp">/bioconda/</span><br>conda config --set show_channel_urls yes<br><span class="hljs-comment">#指定安装某个包</span><br>conda install python=<span class="hljs-number">3.7</span>.<span class="hljs-number">4</span><br><br></code></pre></div></td></tr></table></figure>
 
             </div>
             <hr>
@@ -246,29 +246,17 @@
                 
               </div>
               
-                <p class="note note-warning">
-                  
-                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
-                  
-                </p>
-              
               
                 <div class="post-prevnext">
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/09/29/hello-world%20-%20%E5%89%AF%E6%9C%AC/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Hello World test</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/09/29/hello-world/">
-                        <span class="hidden-mobile">Hello World</span>
+                      <a href="/2021/09/12/seqkit/">
+                        <span class="hidden-mobile">seqkit</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
