@@ -1,0 +1,497 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <meta name="description" content="##worldcloud词云 123456789101112131415tags: python# 1号worldcloud：葛底斯堡演说黑色背景worldcloud# 导入worldcloud制作第三方库wordcloudimport wordcloud# 创建worldcloud对象，赋值给w，现在w就表示了一个worldcloud对象w &#x3D; wordcloud.WordCloud()# 调用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="worldcloud">
+<meta property="og:url" content="http://example.com/2021/10/03/%E8%AF%8D%E4%BA%91/index.html">
+<meta property="og:site_name" content="林国鹏">
+<meta property="og:description" content="##worldcloud词云 123456789101112131415tags: python# 1号worldcloud：葛底斯堡演说黑色背景worldcloud# 导入worldcloud制作第三方库wordcloudimport wordcloud# 创建worldcloud对象，赋值给w，现在w就表示了一个worldcloud对象w &#x3D; wordcloud.WordCloud()# 调用">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2021/10/03/%E8%AF%8D%E4%BA%91/output1.png">
+<meta property="og:image" content="http://example.com/2021/10/03/%E8%AF%8D%E4%BA%91/output2-poem.png">
+<meta property="og:image" content="http://example.com/2021/10/03/%E8%AF%8D%E4%BA%91/output3-sentence.png">
+<meta property="og:image" content="http://example.com/2021/10/03/%E8%AF%8D%E4%BA%91/output4-jn.png">
+<meta property="og:image" content="http://example.com/2021/10/03/%E8%AF%8D%E4%BA%91/output5-village.png">
+<meta property="og:image" content="http://example.com/2021/10/03/%E8%AF%8D%E4%BA%91/output6-village.png">
+<meta property="og:image" content="http://example.com/2021/10/03/%E8%AF%8D%E4%BA%91/output7-chinamap.png">
+<meta property="og:image" content="http://example.com/2021/10/03/%E8%AF%8D%E4%BA%91/output8-threekingdoms.png">
+<meta property="og:image" content="http://example.com/2021/10/03/%E8%AF%8D%E4%BA%91/output9-contour.png">
+<meta property="og:image" content="http://example.com/2021/10/03/%E8%AF%8D%E4%BA%91/output10-alice.png">
+<meta property="og:image" content="http://example.com/2021/10/03/%E8%AF%8D%E4%BA%91/output12-positive.png">
+<meta property="og:image" content="http://example.com/2021/10/03/%E8%AF%8D%E4%BA%91/output12-negative.png">
+<meta property="og:image" content="http://example.com/2021/10/03/%E8%AF%8D%E4%BA%91/output12-positive.png">
+<meta property="og:image" content="http://example.com/2021/10/03/%E8%AF%8D%E4%BA%91/output12-negative.png">
+<meta property="og:image" content="http://example.com/2021/10/03/%E8%AF%8D%E4%BA%91/output13-threekingdoms.png">
+<meta property="article:published_time" content="2021-10-03T08:47:23.000Z">
+<meta property="article:modified_time" content="2021-10-03T09:58:00.293Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="python">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/2021/10/03/%E8%AF%8D%E4%BA%91/output1.png">
+  
+  <title>worldcloud - 林国鹏</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>林国鹏</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="worldcloud">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-10-03 16:47" pubdate>
+        2021年10月3日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      14k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      45 分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">worldcloud</h1>
+            
+            <div class="markdown-body">
+              <p>##worldcloud词云</p>
+<figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs python">tags: python<br><span class="hljs-comment"># 1号worldcloud：葛底斯堡演说黑色背景worldcloud</span><br><br><span class="hljs-comment"># 导入worldcloud制作第三方库wordcloud</span><br><span class="hljs-keyword">import</span> wordcloud<br><br><span class="hljs-comment"># 创建worldcloud对象，赋值给w，现在w就表示了一个worldcloud对象</span><br>w = wordcloud.WordCloud()<br><br><span class="hljs-comment"># 调用worldcloud对象的generate方法，将文本传入</span><br>w.generate(<span class="hljs-string">&#x27;and that government of the people, by the people, for the people, shall not perish from the earth.&#x27;</span>)<br><br><span class="hljs-comment"># 将生成的worldcloud保存为output1.png图片文件，保存出到当前文件夹中</span><br>w.to_file(<span class="hljs-string">&#x27;output1.png&#x27;</span>)<br><br></code></pre></div></td></tr></table></figure>
+
+<img src="/2021/10/03/%E8%AF%8D%E4%BA%91/output1.png" srcset="/img/loading.gif" lazyload style="zoom:50%;">
+
+<figure class="highlight reasonml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs reasonml"># <span class="hljs-number">2</span>号worldcloud：面朝大海，春暖花开<br>import wordcloud<br># 构建worldcloud对象w，设置worldcloud图片宽、高、字体、背景颜色等参数<br>w = wordcloud.<span class="hljs-constructor">WordCloud(<span class="hljs-params">width</span>=1000,<span class="hljs-params">height</span>=700,<span class="hljs-params">background_color</span>=&#x27;<span class="hljs-params">white</span>&#x27;,<span class="hljs-params">font_path</span>=&#x27;<span class="hljs-params">msyh</span>.<span class="hljs-params">ttc</span>&#x27;)</span><br># 调用worldcloud对象的generate方法，将文本传入<br>w.generate(&#x27;从明天起，做一个幸福的人。喂马、劈柴，周游世界。从明天起，关心粮食和蔬菜。我有一所房子，面朝大海，春暖花开&#x27;)<br># 将生成的worldcloud保存为output2-poem.png图片文件，保存到当前文件夹中<br>w.<span class="hljs-keyword">to</span><span class="hljs-constructor">_file(&#x27;<span class="hljs-params">output2</span>-<span class="hljs-params">poem</span>.<span class="hljs-params">png</span>&#x27;)</span><br></code></pre></div></td></tr></table></figure>
+
+<img src="/2021/10/03/%E8%AF%8D%E4%BA%91/output2-poem.png" srcset="/img/loading.gif" lazyload style="zoom:50%;">
+
+<figure class="highlight routeros"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs routeros"><span class="hljs-comment"># 3号worldcloud：乡村振兴战略中央文件</span><br>import wordcloud<br><br><span class="hljs-comment"># 从外部.txt文件中读取大段文本，存入变量txt中</span><br>f = open(<span class="hljs-string">&#x27;关于实施乡村振兴战略的意见.txt&#x27;</span>,<span class="hljs-attribute">encoding</span>=<span class="hljs-string">&#x27;utf-8&#x27;</span>)<br>txt = f.read()<br><br><span class="hljs-comment"># 构建worldcloud对象w，设置worldcloud图片宽、高、字体、背景颜色等参数</span><br>w = wordcloud.WordCloud(<span class="hljs-attribute">width</span>=1000,<br>                        <span class="hljs-attribute">height</span>=700,<br>                        <span class="hljs-attribute">background_color</span>=<span class="hljs-string">&#x27;white&#x27;</span>,<br>                        <span class="hljs-attribute">font_path</span>=<span class="hljs-string">&#x27;msyh.ttc&#x27;</span>)<br><br><span class="hljs-comment"># 将txt变量传入w的generate()方法，给worldcloud输入文字</span><br>w.generate(txt)<br><br><span class="hljs-comment"># 将worldcloud图片导出到当前文件夹</span><br>w.to_file(<span class="hljs-string">&#x27;output3-sentence.png&#x27;</span>)<br><br></code></pre></div></td></tr></table></figure>
+
+<img src="/2021/10/03/%E8%AF%8D%E4%BA%91/output3-sentence.png" srcset="/img/loading.gif" lazyload style="zoom:50%;">
+
+<figure class="highlight routeros"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs routeros"><span class="hljs-comment"># 4号worldcloud：同济大学介绍worldcloud</span><br><br><span class="hljs-comment"># 导入worldcloud制作库wordcloud和中文分词库jieba</span><br>import jieba<br>import wordcloud<br><span class="hljs-comment"># 构建并配置worldcloud对象w</span><br>w = wordcloud.WordCloud(<span class="hljs-attribute">width</span>=1000,<br>                        <span class="hljs-attribute">height</span>=700,<br>                        <span class="hljs-attribute">background_color</span>=<span class="hljs-string">&#x27;white&#x27;</span>,<br>                        <span class="hljs-attribute">font_path</span>=<span class="hljs-string">&#x27;msyh.ttc&#x27;</span>)<br><br><span class="hljs-comment"># 调用jieba的lcut()方法对原始文本进行中文分词，得到string</span><br>txt = <span class="hljs-string">&#x27;同济大学（Tongji University），简称“同济”，是中华人民共和国教育部直属，由教育部、国家海洋局和上海市共建的全国重点大学，历史悠久、声誉卓著，是国家“双一流”、“211工程”、“985工程”重点建设高校，也是收生标准最严格的中国大学之一&#x27;</span><br>txtlist = jieba.lcut(txt)<br>string = <span class="hljs-string">&quot; &quot;</span>.join(txtlist)<br><br><span class="hljs-comment"># 将string变量传入w的generate()方法，给worldcloud输入文字</span><br>w.generate(string)<br><br><span class="hljs-comment"># 将worldcloud图片导出到当前文件夹</span><br>w.to_file(<span class="hljs-string">&#x27;output4-tongji.png&#x27;</span>)<br><br></code></pre></div></td></tr></table></figure>
+
+<img src="/2021/10/03/%E8%AF%8D%E4%BA%91/output4-jn.png" srcset="/img/loading.gif" lazyload style="zoom:50%;">
+
+<figure class="highlight routeros"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs routeros"><span class="hljs-comment"># 5号worldcloud：乡村振兴战略中央文件（worldcloud）</span><br><br><span class="hljs-comment"># 导入worldcloud制作库wordcloud和中文分词库jieba</span><br>import jieba<br>import wordcloud<br><br><span class="hljs-comment"># 构建并配置worldcloud对象w</span><br>w = wordcloud.WordCloud(<span class="hljs-attribute">width</span>=1000,<br>                        <span class="hljs-attribute">height</span>=700,<br>                        <span class="hljs-attribute">background_color</span>=<span class="hljs-string">&#x27;white&#x27;</span>,<br>                        <span class="hljs-attribute">font_path</span>=<span class="hljs-string">&#x27;msyh.ttc&#x27;</span>)<br><br><span class="hljs-comment"># 对来自外部文件的文本进行中文分词，得到string</span><br>f = open(<span class="hljs-string">&#x27;关于实施乡村振兴战略的意见.txt&#x27;</span>,<span class="hljs-attribute">encoding</span>=<span class="hljs-string">&#x27;utf-8&#x27;</span>)<br>txt = f.read()<br>txtlist = jieba.lcut(txt)<br>string = <span class="hljs-string">&quot; &quot;</span>.join(txtlist)<br><br><span class="hljs-comment"># 将string变量传入w的generate()方法，给worldcloud输入文字</span><br>w.generate(string)<br><br><span class="hljs-comment"># 将worldcloud图片导出到当前文件夹</span><br>w.to_file(<span class="hljs-string">&#x27;output5-village.png&#x27;</span>)<br><br></code></pre></div></td></tr></table></figure>
+
+<img src="/2021/10/03/%E8%AF%8D%E4%BA%91/output5-village.png" srcset="/img/loading.gif" lazyload style="zoom:50%;">
+
+<figure class="highlight routeros"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs routeros"><span class="hljs-comment"># 6号worldcloud：乡村振兴战略中央文件（五角星形状）</span><br><br><span class="hljs-comment"># 导入worldcloud制作库wordcloud和中文分词库jieba</span><br>import jieba<br>import wordcloud<br><br><span class="hljs-comment"># 导入imageio库中的imread函数，并用这个函数读取本地图片，作为worldcloud形状图片</span><br>import imageio<br>mk = imageio.imread(<span class="hljs-string">&quot;wujiaoxing.png&quot;</span>)<br><br><span class="hljs-comment"># 构建并配置worldcloud对象w，注意要加scale参数，提高清晰度</span><br>w = wordcloud.WordCloud(<span class="hljs-attribute">width</span>=1000,<br>                        <span class="hljs-attribute">height</span>=700,<br>                        <span class="hljs-attribute">background_color</span>=<span class="hljs-string">&#x27;white&#x27;</span>,<br>                        <span class="hljs-attribute">font_path</span>=<span class="hljs-string">&#x27;msyh.ttc&#x27;</span>,<br>                        <span class="hljs-attribute">mask</span>=mk,<br>                        <span class="hljs-attribute">scale</span>=15)<br><br><span class="hljs-comment"># 对来自外部文件的文本进行中文分词，得到string</span><br>f = open(<span class="hljs-string">&#x27;关于实施乡村振兴战略的意见.txt&#x27;</span>,<span class="hljs-attribute">encoding</span>=<span class="hljs-string">&#x27;utf-8&#x27;</span>)<br>txt = f.read()<br>txtlist = jieba.lcut(txt)<br>string = <span class="hljs-string">&quot; &quot;</span>.join(txtlist)<br><br><span class="hljs-comment"># 将string变量传入w的generate()方法，给worldcloud输入文字</span><br>w.generate(string)<br><br><span class="hljs-comment"># 将worldcloud图片导出到当前文件夹</span><br>w.to_file(<span class="hljs-string">&#x27;output6-village.png&#x27;</span>)<br><br></code></pre></div></td></tr></table></figure>
+
+<img src="/2021/10/03/%E8%AF%8D%E4%BA%91/output6-village.png" srcset="/img/loading.gif" lazyload style="zoom:50%;">
+
+<figure class="highlight routeros"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs routeros"><span class="hljs-comment"># 7号worldcloud：新时代中国特色社会主义（中国地图形状）</span><br><br><span class="hljs-comment"># 导入worldcloud制作库wordcloud和中文分词库jieba</span><br>import jieba<br>import wordcloud<br><br><span class="hljs-comment"># 导入imageio库中的imread函数，并用这个函数读取本地图片，作为worldcloud形状图片</span><br>import imageio<br>mk = imageio.imread(<span class="hljs-string">&quot;chinamap.png&quot;</span>)<br><br><span class="hljs-comment"># 构建并配置worldcloud对象w，注意要加scale参数，提高清晰度</span><br>w = wordcloud.WordCloud(<span class="hljs-attribute">width</span>=1000,<br>                        <span class="hljs-attribute">height</span>=700,<br>                        <span class="hljs-attribute">background_color</span>=<span class="hljs-string">&#x27;white&#x27;</span>,<br>                        <span class="hljs-attribute">font_path</span>=<span class="hljs-string">&#x27;msyh.ttc&#x27;</span>,<br>                        <span class="hljs-attribute">mask</span>=mk,<br>                        <span class="hljs-attribute">scale</span>=15)<br><br><span class="hljs-comment"># 对来自外部文件的文本进行中文分词，得到string</span><br>f = open(<span class="hljs-string">&#x27;新时代中国特色社会主义.txt&#x27;</span>,<span class="hljs-attribute">encoding</span>=<span class="hljs-string">&#x27;utf-8&#x27;</span>)<br>txt = f.read()<br>txtlist = jieba.lcut(txt)<br>string = <span class="hljs-string">&quot; &quot;</span>.join(txtlist)<br><br><span class="hljs-comment"># 将string变量传入w的generate()方法，给worldcloud输入文字</span><br>w.generate(string)<br><br><span class="hljs-comment"># 将worldcloud图片导出到当前文件夹</span><br>w.to_file(<span class="hljs-string">&#x27;output7-chinamap.png&#x27;</span>)<br><br></code></pre></div></td></tr></table></figure>
+
+<img src="/2021/10/03/%E8%AF%8D%E4%BA%91/output7-chinamap.png" srcset="/img/loading.gif" lazyload style="zoom:50%;">
+
+<figure class="highlight routeros"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs routeros"><span class="hljs-comment"># 8号worldcloud：《三国演义》worldcloud（stopwords参数去除“曹操”和“孔明”两个词）</span><br><br><span class="hljs-comment"># 导入worldcloud制作库wordcloud和中文分词库jieba</span><br>import jieba<br>import wordcloud<br><br><span class="hljs-comment"># 导入imageio库中的imread函数，并用这个函数读取本地图片，作为worldcloud形状图片</span><br>import imageio<br>mk = imageio.imread(<span class="hljs-string">&quot;chinamap.png&quot;</span>)<br><br><span class="hljs-comment"># 构建并配置worldcloud对象w，注意要加stopwords集合参数，将不想展示在worldcloud中的词放在stopwords集合里，这里去掉“曹操”和“孔明”两个词</span><br>w = wordcloud.WordCloud(<span class="hljs-attribute">width</span>=1000,<br>                        <span class="hljs-attribute">height</span>=700,<br>                        <span class="hljs-attribute">background_color</span>=<span class="hljs-string">&#x27;white&#x27;</span>,<br>                        <span class="hljs-attribute">font_path</span>=<span class="hljs-string">&#x27;msyh.ttc&#x27;</span>,<br>                        <span class="hljs-attribute">mask</span>=mk,<br>                        <span class="hljs-attribute">scale</span>=15,<br>                        stopwords=&#123;<span class="hljs-string">&#x27;曹操&#x27;</span>,<span class="hljs-string">&#x27;孔明&#x27;</span>&#125;)<br><br><span class="hljs-comment"># 对来自外部文件的文本进行中文分词，得到string</span><br>f = open(<span class="hljs-string">&#x27;三国演义.txt&#x27;</span>,<span class="hljs-attribute">encoding</span>=<span class="hljs-string">&#x27;utf-8&#x27;</span>)<br>txt = f.read()<br>txtlist = jieba.lcut(txt)<br>string = <span class="hljs-string">&quot; &quot;</span>.join(txtlist)<br><br><span class="hljs-comment"># 将string变量传入w的generate()方法，给worldcloud输入文字</span><br>w.generate(string)<br><br><span class="hljs-comment"># 将worldcloud图片导出到当前文件夹</span><br>w.to_file(<span class="hljs-string">&#x27;output8-threekingdoms.png&#x27;</span>)<br><br></code></pre></div></td></tr></table></figure>
+
+<img src="/2021/10/03/%E8%AF%8D%E4%BA%91/output8-threekingdoms.png" srcset="/img/loading.gif" lazyload style="zoom:50%;">
+
+<figure class="highlight vala"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs vala"><span class="hljs-meta"># 9号worldcloud：哈姆雷特（勾勒轮廓线）</span><br><span class="hljs-meta"># 导入worldcloud制作库wordcloud</span><br>import wordcloud<br><br><span class="hljs-meta"># 将外部文件包含的文本保存在string变量中</span><br><span class="hljs-keyword">string</span> = open(<span class="hljs-string">&#x27;hamlet.txt&#x27;</span>).read()<br><br><span class="hljs-meta"># 导入imageio库中的imread函数，并用这个函数读取本地图片，作为worldcloud形状图片</span><br>import imageio<br>mk = imageio.imread(<span class="hljs-string">&quot;alice.png&quot;</span>)<br><br><span class="hljs-meta"># 构建worldcloud对象w，注意增加参数contour_width和contour_color设置轮廓宽度和颜色</span><br>w = wordcloud.WordCloud(background_color=<span class="hljs-string">&quot;white&quot;</span>,<br>                        mask=mk,<br>                        contour_width=<span class="hljs-number">1</span>,<br>                        contour_color=<span class="hljs-string">&#x27;steelblue&#x27;</span>)<br><br><span class="hljs-meta"># # 将string变量传入w的generate()方法，给worldcloud输入文字</span><br>w.generate(<span class="hljs-keyword">string</span>)<br><br><span class="hljs-meta"># 将worldcloud图片导出到当前文件夹</span><br>w.to_file(<span class="hljs-string">&#x27;output9-contour.png&#x27;</span>)<br><br></code></pre></div></td></tr></table></figure>
+
+<img src="/2021/10/03/%E8%AF%8D%E4%BA%91/output9-contour.png" srcset="/img/loading.gif" lazyload style="zoom:50%;">
+
+<figure class="highlight routeros"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs routeros"><span class="hljs-comment"># 10号worldcloud：《爱丽丝漫游仙境》worldcloud（按模板填色）</span><br><br><span class="hljs-comment"># 导入绘图库matplotlib和worldcloud制作库wordcloud</span><br>import matplotlib.pyplot as plt<br><span class="hljs-keyword">from</span> wordcloud import WordCloud,ImageColorGenerator<br><br><span class="hljs-comment"># 将外部文件包含的文本保存在text变量中</span><br>text = open(<span class="hljs-string">&#x27;alice.txt&#x27;</span>).read()<br><br><span class="hljs-comment"># 导入imageio库中的imread函数，并用这个函数读取本地图片queen2.jfif，作为worldcloud形状图片</span><br>import imageio<br>mk = imageio.imread(<span class="hljs-string">&quot;alice_color.png&quot;</span>)<br><br><span class="hljs-comment"># 构建worldcloud对象w</span><br>wc = WordCloud(<span class="hljs-attribute">background_color</span>=<span class="hljs-string">&quot;white&quot;</span>,<br>               <span class="hljs-attribute">mask</span>=mk,)<br><span class="hljs-comment"># 将text字符串变量传入w的generate()方法，给worldcloud输入文字</span><br>wc.generate(text)<br><br><span class="hljs-comment"># 调用wordcloud库中的ImageColorGenerator()函数，提取模板图片各部分的颜色</span><br>image_colors = ImageColorGenerator(mk)<br><br><span class="hljs-comment"># 显示原生worldcloud图、按模板图片颜色的worldcloud图和模板图片，按左、中、右显示</span><br>fig, axes = plt.subplots(1, 3)<br><span class="hljs-comment"># 最左边的图片显示原生worldcloud图</span><br>axes[0].imshow(wc)<br><span class="hljs-comment"># 中间的图片显示按模板图片颜色生成的worldcloud图，采用双线性插值的方法显示颜色</span><br>axes[1].imshow(wc.recolor(<span class="hljs-attribute">color_func</span>=image_colors), <span class="hljs-attribute">interpolation</span>=<span class="hljs-string">&quot;bilinear&quot;</span>)<br><span class="hljs-comment"># 右边的图片显示模板图片</span><br>axes[2].imshow(mk, <span class="hljs-attribute">cmap</span>=plt.cm.gray)<br><span class="hljs-keyword">for</span> ax <span class="hljs-keyword">in</span> axes:<br>    ax.set_axis_off()<br>plt.show()<br><br><span class="hljs-comment"># 给worldcloud对象按模板图片的颜色重新上色</span><br>wc_color = wc.recolor(<span class="hljs-attribute">color_func</span>=image_colors)<br><span class="hljs-comment"># 将worldcloud图片导出到当前文件夹</span><br>wc_color.to_file(<span class="hljs-string">&#x27;output10-alice.png&#x27;</span>)<br><br></code></pre></div></td></tr></table></figure>
+
+<img src="/2021/10/03/%E8%AF%8D%E4%BA%91/output10-alice.png" srcset="/img/loading.gif" lazyload style="zoom:50%;">
+
+<figure class="highlight routeros"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs routeros"><span class="hljs-comment"># 11号worldcloud：绘制你的微信好友个性签名worldcloud</span><br><br><span class="hljs-comment"># 导入微信库ichat，中文分词库jieba</span><br>import itchat<br>import jieba<br><br><span class="hljs-comment"># 先登录微信，跳出登陆二维码</span><br>itchat.login()<br>tList = []<br><span class="hljs-comment"># 获取好友列表</span><br>friends = itchat.get_friends(<span class="hljs-attribute">update</span>=<span class="hljs-literal">True</span>)<br><br><span class="hljs-comment"># 构建所有好友个性签名组成的大列表tList</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> friends:<br>    # 获取个性签名<br>    signature = i[<span class="hljs-string">&quot;Signature&quot;</span>]<br>    <span class="hljs-keyword">if</span> <span class="hljs-string">&#x27;emoji&#x27;</span> <span class="hljs-keyword">in</span> signature:<br>        pass<br>    <span class="hljs-keyword">else</span>:<br>        tList.append(signature)<br>text = <span class="hljs-string">&quot; &quot;</span>.join(tList)<br><br><span class="hljs-comment"># 对个性签名进行中文分词</span><br>wordlist_jieba = jieba.lcut(text, <span class="hljs-attribute">cut_all</span>=<span class="hljs-literal">True</span>)<br>wl_space_split = <span class="hljs-string">&quot; &quot;</span>.join(wordlist_jieba)<br><br><span class="hljs-comment"># 导入imageio库中的imread函数，并用这个函数读取本地图片，作为worldcloud形状图片</span><br>import imageio<br>mk = imageio.imread(<span class="hljs-string">&quot;chinamap.png&quot;</span>)<br><br><span class="hljs-comment"># 导入worldcloud制作库wordcloud</span><br>import wordcloud<br><br><span class="hljs-comment"># 构建并配置worldcloud对象w，注意要加scale参数，提高清晰度</span><br>my_wordcloud = wordcloud.WordCloud(<span class="hljs-attribute">background_color</span>=<span class="hljs-string">&#x27;white&#x27;</span>,<br>                                   <span class="hljs-attribute">width</span>=1000,<br>                                   <span class="hljs-attribute">height</span>=700,<br>                                   <span class="hljs-attribute">font_path</span>=<span class="hljs-string">&#x27;msyh.ttc&#x27;</span>,<br>                                   <span class="hljs-attribute">max_words</span>=2000,<br>                                   <span class="hljs-attribute">mask</span>=mk,<br>                                   <span class="hljs-attribute">scale</span>=20)<br>my_wordcloud.generate(wl_space_split)<br><br>nickname = friends[0][<span class="hljs-string">&#x27;NickName&#x27;</span>]<br>filename = <span class="hljs-string">&quot;output11-&#123;&#125;的微信好友个性签名worldcloud图.png&quot;</span>.format(nickname)<br>my_wordcloud.to_file(filename)<br><br><span class="hljs-comment"># 显示worldcloud图片</span><br>import matplotlib.pyplot as plt<br>plt.imshow(my_wordcloud)<br>plt.axis(<span class="hljs-string">&quot;off&quot;</span>)<br>plt.show()<br><span class="hljs-builtin-name">print</span>(<span class="hljs-string">&#x27;程序结束&#x27;</span>)<br><br></code></pre></div></td></tr></table></figure>
+
+<figure class="highlight routeros"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs routeros"><span class="hljs-comment"># 12号worldcloud：《三体Ⅱ黑暗森林》情感分析worldcloud</span><br><br><span class="hljs-comment"># 导入worldcloud制作库wordcloud和中文分词库jieba</span><br>import jieba<br>import wordcloud<br><br><span class="hljs-comment"># 导入imageio库中的imread函数，并用这个函数读取本地图片，作为worldcloud形状图片</span><br>import imageio<br>mk = imageio.imread(<span class="hljs-string">&quot;chinamap.png&quot;</span>)<br><br><span class="hljs-comment"># 构建并配置两个worldcloud对象w1和w2，分别存放积极词和消极词</span><br>w1 = wordcloud.WordCloud(<span class="hljs-attribute">width</span>=1000,<br>                        <span class="hljs-attribute">height</span>=700,<br>                        <span class="hljs-attribute">background_color</span>=<span class="hljs-string">&#x27;white&#x27;</span>,<br>                        <span class="hljs-attribute">font_path</span>=<span class="hljs-string">&#x27;msyh.ttc&#x27;</span>,<br>                        <span class="hljs-attribute">mask</span>=mk,<br>                        <span class="hljs-attribute">scale</span>=15)<br>w2 = wordcloud.WordCloud(<span class="hljs-attribute">width</span>=1000,<br>                        <span class="hljs-attribute">height</span>=700,<br>                        <span class="hljs-attribute">background_color</span>=<span class="hljs-string">&#x27;white&#x27;</span>,<br>                        <span class="hljs-attribute">font_path</span>=<span class="hljs-string">&#x27;msyh.ttc&#x27;</span>,<br>                        <span class="hljs-attribute">mask</span>=mk,<br>                        <span class="hljs-attribute">scale</span>=15)<br><br><span class="hljs-comment"># 对来自外部文件的文本进行中文分词，得到积极词汇和消极词汇的两个列表</span><br>f = open(<span class="hljs-string">&#x27;三体黑暗森林.txt&#x27;</span>,<span class="hljs-attribute">encoding</span>=<span class="hljs-string">&#x27;utf-8&#x27;</span>)<br>txt = f.read()<br>txtlist = jieba.lcut(txt)<br>positivelist = []<br>negativelist = []<br><br><span class="hljs-comment"># 下面对文本中的每个词进行情感分析，情感&gt;0.96判为积极词，情感&lt;0.06判为消极词</span><br><span class="hljs-builtin-name">print</span>(<span class="hljs-string">&#x27;开始进行情感分析，请稍等，三国演义全文那么长的文本需要三分钟左右&#x27;</span>)<br><span class="hljs-comment"># 导入自然语言处理第三方库snownlp</span><br>import snownlp<br><span class="hljs-keyword">for</span> each <span class="hljs-keyword">in</span> txtlist:<br>    each_word = snownlp.SnowNLP(each)<br>    feeling = each_word.sentiments<br>    <span class="hljs-keyword">if</span> feeling &gt; 0.96:<br>        positivelist.append(each)<br>    elif feeling &lt; 0.06:<br>        negativelist.append(each)<br>    <span class="hljs-keyword">else</span>:<br>        pass<br><span class="hljs-comment"># 将积极和消极的两个列表各自合并成积极字符串和消极字符串，字符串中的词用空格分隔</span><br>positive_string = <span class="hljs-string">&quot; &quot;</span>.join(positivelist)<br>negative_string = <span class="hljs-string">&quot; &quot;</span>.join(negativelist)<br><br><br><span class="hljs-comment"># 将string变量传入w的generate()方法，给worldcloud输入文字</span><br>w1.generate(positive_string)<br>w2.generate(negative_string)<br><br><span class="hljs-comment"># 将积极、消极的两个worldcloud图片导出到当前文件夹</span><br>w1.to_file(<span class="hljs-string">&#x27;output12-positive.png&#x27;</span>)<br>w2.to_file(<span class="hljs-string">&#x27;output12-negative.png&#x27;</span>)<br><span class="hljs-builtin-name">print</span>(<span class="hljs-string">&#x27;worldcloud生成完成&#x27;</span>)<br><br></code></pre></div></td></tr></table></figure>
+
+<p><img src="/2021/10/03/%E8%AF%8D%E4%BA%91/output12-positive.png" srcset="/img/loading.gif" lazyload style="zoom:50%;"><img src="/2021/10/03/%E8%AF%8D%E4%BA%91/output12-negative.png" srcset="/img/loading.gif" lazyload><img src="/2021/10/03/%E8%AF%8D%E4%BA%91/output12-positive.png" srcset="/img/loading.gif" lazyload style="zoom:50%;"><img src="/2021/10/03/%E8%AF%8D%E4%BA%91/output12-negative.png" srcset="/img/loading.gif" lazyload></p>
+<figure class="highlight python"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs python"><span class="hljs-comment"># 13号worldcloud：三国人物分色worldcloud</span><br><br><span class="hljs-comment"># 导入wordcloud库，并定义两个函数</span><br><span class="hljs-keyword">from</span> wordcloud <span class="hljs-keyword">import</span> (WordCloud, get_single_color_func)<br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SimpleGroupedColorFunc</span>(<span class="hljs-params"><span class="hljs-built_in">object</span></span>):</span><br>    <span class="hljs-string">&quot;&quot;&quot;Create a color function object which assigns EXACT colors</span><br><span class="hljs-string">       to certain words based on the color to words mapping</span><br><span class="hljs-string"></span><br><span class="hljs-string">       Parameters</span><br><span class="hljs-string">       ----------</span><br><span class="hljs-string">       color_to_words : dict(str -&gt; list(str))</span><br><span class="hljs-string">         A dictionary that maps a color to the list of words.</span><br><span class="hljs-string"></span><br><span class="hljs-string">       default_color : str</span><br><span class="hljs-string">         Color that will be assigned to a word that&#x27;s not a member</span><br><span class="hljs-string">         of any value from color_to_words.</span><br><span class="hljs-string">    &quot;&quot;&quot;</span><br><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, color_to_words, default_color</span>):</span><br>        self.word_to_color = &#123;word: color<br>                              <span class="hljs-keyword">for</span> (color, words) <span class="hljs-keyword">in</span> color_to_words.items()<br>                              <span class="hljs-keyword">for</span> word <span class="hljs-keyword">in</span> words&#125;<br><br>        self.default_color = default_color<br><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__call__</span>(<span class="hljs-params">self, word, **kwargs</span>):</span><br>        <span class="hljs-keyword">return</span> self.word_to_color.get(word, self.default_color)<br><br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GroupedColorFunc</span>(<span class="hljs-params"><span class="hljs-built_in">object</span></span>):</span><br>    <span class="hljs-string">&quot;&quot;&quot;Create a color function object which assigns DIFFERENT SHADES of</span><br><span class="hljs-string">       specified colors to certain words based on the color to words mapping.</span><br><span class="hljs-string"></span><br><span class="hljs-string">       Uses wordcloud.get_single_color_func</span><br><span class="hljs-string"></span><br><span class="hljs-string">       Parameters</span><br><span class="hljs-string">       ----------</span><br><span class="hljs-string">       color_to_words : dict(str -&gt; list(str))</span><br><span class="hljs-string">         A dictionary that maps a color to the list of words.</span><br><span class="hljs-string"></span><br><span class="hljs-string">       default_color : str</span><br><span class="hljs-string">         Color that will be assigned to a word that&#x27;s not a member</span><br><span class="hljs-string">         of any value from color_to_words.</span><br><span class="hljs-string">    &quot;&quot;&quot;</span><br><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, color_to_words, default_color</span>):</span><br>        self.color_func_to_words = [<br>            (get_single_color_func(color), <span class="hljs-built_in">set</span>(words))<br>            <span class="hljs-keyword">for</span> (color, words) <span class="hljs-keyword">in</span> color_to_words.items()]<br><br>        self.default_color_func = get_single_color_func(default_color)<br><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_color_func</span>(<span class="hljs-params">self, word</span>):</span><br>        <span class="hljs-string">&quot;&quot;&quot;Returns a single_color_func associated with the word&quot;&quot;&quot;</span><br>        <span class="hljs-keyword">try</span>:<br>            color_func = <span class="hljs-built_in">next</span>(<br>                color_func <span class="hljs-keyword">for</span> (color_func, words) <span class="hljs-keyword">in</span> self.color_func_to_words<br>                <span class="hljs-keyword">if</span> word <span class="hljs-keyword">in</span> words)<br>        <span class="hljs-keyword">except</span> StopIteration:<br>            color_func = self.default_color_func<br><br>        <span class="hljs-keyword">return</span> color_func<br><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__call__</span>(<span class="hljs-params">self, word, **kwargs</span>):</span><br>        <span class="hljs-keyword">return</span> self.get_color_func(word)(word, **kwargs)<br>    <br><span class="hljs-comment"># 导入imageio库中的imread函数，并用这个函数读取本地图片，作为worldcloud形状图片</span><br><span class="hljs-keyword">import</span> imageio<br>mk = imageio.imread(<span class="hljs-string">&quot;chinamap.png&quot;</span>)<br><br>w = WordCloud(width=<span class="hljs-number">1000</span>,<br>              height=<span class="hljs-number">700</span>,<br>              background_color=<span class="hljs-string">&#x27;white&#x27;</span>,<br>              font_path=<span class="hljs-string">&#x27;msyh.ttc&#x27;</span>,<br>              mask=mk,<br>              scale=<span class="hljs-number">15</span>,<br>              max_font_size=<span class="hljs-number">60</span>,<br>              max_words=<span class="hljs-number">20000</span>,<br>              font_step=<span class="hljs-number">1</span>)<br><br><span class="hljs-keyword">import</span> jieba<br><span class="hljs-comment"># 对来自外部文件的文本进行中文分词，得到string</span><br>f = <span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;三国演义.txt&#x27;</span>,encoding=<span class="hljs-string">&#x27;utf-8&#x27;</span>)<br>txt = f.read()<br>txtlist = jieba.lcut(txt)<br>string = <span class="hljs-string">&quot; &quot;</span>.join(txtlist)<br><br><span class="hljs-comment"># 将string变量传入w的generate()方法，给worldcloud输入文字</span><br>w.generate(string)<br><br><span class="hljs-comment"># 创建字典，按人物所在的不同阵营安排不同颜色，绿色是蜀国，橙色是魏国，紫色是东吴，粉色是诸侯群雄</span><br>color_to_words = &#123;<br>    <span class="hljs-string">&#x27;green&#x27;</span>: [<span class="hljs-string">&#x27;刘备&#x27;</span>,<span class="hljs-string">&#x27;刘玄德&#x27;</span>,<span class="hljs-string">&#x27;孔明&#x27;</span>,<span class="hljs-string">&#x27;诸葛孔明&#x27;</span>, <span class="hljs-string">&#x27;玄德&#x27;</span>, <span class="hljs-string">&#x27;关公&#x27;</span>, <span class="hljs-string">&#x27;玄德曰&#x27;</span>,<span class="hljs-string">&#x27;孔明曰&#x27;</span>,<br>              <span class="hljs-string">&#x27;张飞&#x27;</span>, <span class="hljs-string">&#x27;赵云&#x27;</span>,<span class="hljs-string">&#x27;后主&#x27;</span>, <span class="hljs-string">&#x27;黄忠&#x27;</span>, <span class="hljs-string">&#x27;马超&#x27;</span>, <span class="hljs-string">&#x27;姜维&#x27;</span>, <span class="hljs-string">&#x27;魏延&#x27;</span>, <span class="hljs-string">&#x27;孟获&#x27;</span>,<br>              <span class="hljs-string">&#x27;关兴&#x27;</span>,<span class="hljs-string">&#x27;诸葛亮&#x27;</span>,<span class="hljs-string">&#x27;云长&#x27;</span>,<span class="hljs-string">&#x27;孟达&#x27;</span>,<span class="hljs-string">&#x27;庞统&#x27;</span>,<span class="hljs-string">&#x27;廖化&#x27;</span>,<span class="hljs-string">&#x27;马岱&#x27;</span>],<br>    <span class="hljs-string">&#x27;red&#x27;</span>: [<span class="hljs-string">&#x27;曹操&#x27;</span>, <span class="hljs-string">&#x27;司马懿&#x27;</span>, <span class="hljs-string">&#x27;夏侯&#x27;</span>, <span class="hljs-string">&#x27;荀彧&#x27;</span>, <span class="hljs-string">&#x27;郭嘉&#x27;</span>,<span class="hljs-string">&#x27;邓艾&#x27;</span>,<span class="hljs-string">&#x27;许褚&#x27;</span>,<br>            <span class="hljs-string">&#x27;徐晃&#x27;</span>,<span class="hljs-string">&#x27;许诸&#x27;</span>,<span class="hljs-string">&#x27;曹仁&#x27;</span>,<span class="hljs-string">&#x27;司马昭&#x27;</span>,<span class="hljs-string">&#x27;庞德&#x27;</span>,<span class="hljs-string">&#x27;于禁&#x27;</span>,<span class="hljs-string">&#x27;夏侯渊&#x27;</span>,<span class="hljs-string">&#x27;曹真&#x27;</span>,<span class="hljs-string">&#x27;钟会&#x27;</span>],<br>    <span class="hljs-string">&#x27;purple&#x27;</span>:[<span class="hljs-string">&#x27;孙权&#x27;</span>,<span class="hljs-string">&#x27;周瑜&#x27;</span>,<span class="hljs-string">&#x27;东吴&#x27;</span>,<span class="hljs-string">&#x27;孙策&#x27;</span>,<span class="hljs-string">&#x27;吕蒙&#x27;</span>,<span class="hljs-string">&#x27;陆逊&#x27;</span>,<span class="hljs-string">&#x27;鲁肃&#x27;</span>,<span class="hljs-string">&#x27;黄盖&#x27;</span>,<span class="hljs-string">&#x27;太史慈&#x27;</span>],<br>    <span class="hljs-string">&#x27;pink&#x27;</span>:[<span class="hljs-string">&#x27;董卓&#x27;</span>,<span class="hljs-string">&#x27;袁术&#x27;</span>,<span class="hljs-string">&#x27;袁绍&#x27;</span>,<span class="hljs-string">&#x27;吕布&#x27;</span>,<span class="hljs-string">&#x27;刘璋&#x27;</span>,<span class="hljs-string">&#x27;刘表&#x27;</span>,<span class="hljs-string">&#x27;貂蝉&#x27;</span>]<br>&#125;<br><br><span class="hljs-comment"># 其它词语的颜色</span><br>default_color = <span class="hljs-string">&#x27;gray&#x27;</span><br><br><span class="hljs-comment"># 构建新的颜色规则</span><br>grouped_color_func = GroupedColorFunc(color_to_words, default_color)<br><br><span class="hljs-comment"># 按照新的颜色规则重新绘制worldcloud颜色</span><br>w.recolor(color_func=grouped_color_func)<br><br><span class="hljs-comment"># 将worldcloud图片导出到当前文件夹</span><br>w.to_file(<span class="hljs-string">&#x27;output13-threekingdoms.png&#x27;</span>)<br><br></code></pre></div></td></tr></table></figure>
+
+<img src="/2021/10/03/%E8%AF%8D%E4%BA%91/output13-threekingdoms.png" srcset="/img/loading.gif" lazyload style="zoom:50%;">
+
+<figure class="highlight stylus"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs stylus">#测试文本jieba<br>import jieba<br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;\n&#x27;</span>)</span></span><br>text = <span class="hljs-string">&#x27;动力学和电磁学&#x27;</span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;这是一段文本：&#x27;</span>,text)</span></span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;\n&#x27;</span>)</span></span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;&#123;:-^50&#125;&#x27;</span>.format(<span class="hljs-string">&#x27;下面的红色提示是导入语言模型时的正常提示，不用管它&#x27;</span>)</span></span>)<br>textlist = jieba<span class="hljs-selector-class">.lcut</span>(text)<br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;&#123;:-^50&#125;&#x27;</span>.format(<span class="hljs-string">&#x27;精确模式：每个字只用一遍，不存在冗余词汇&#x27;</span>)</span></span>)<br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;\n&#x27;</span>)</span></span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;分词之后生成的列表为&#x27;</span>,textlist)</span></span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;\n&#x27;</span>)</span></span><br><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;&#123;:-^50&#125;&#x27;</span>.format(<span class="hljs-string">&#x27;全模式：把每个字可能形成的词汇都提取出来，存在冗余&#x27;</span>)</span></span>)<br>textlist = jieba<span class="hljs-selector-class">.lcut</span>(text,cut_all=True)<br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;\n&#x27;</span>)</span></span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;分词之后生成的列表为&#x27;</span>,textlist)</span></span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;\n&#x27;</span>)</span></span><br><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;&#123;:-^50&#125;&#x27;</span>.format(<span class="hljs-string">&#x27;搜索引擎模式：将全模式分词的结果从短到长排列好&#x27;</span>)</span></span>)<br>textlist = jieba<span class="hljs-selector-class">.lcut_for_search</span>(text)<br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;\n&#x27;</span>)</span></span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;分词之后生成的列表为&#x27;</span>,textlist)</span></span><br></code></pre></div></td></tr></table></figure>
+
+<figure class="highlight stylus"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs stylus">#情感分析snownlp<br>import snownlp<br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;\n&#x27;</span>)</span></span><br>text1 = <span class="hljs-string">&#x27;中华民族伟大复兴&#x27;</span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;&#123;:-^50&#125;&#x27;</span>.format(<span class="hljs-string">&#x27;测试文本：&#x27;</span>+text1)</span></span>)<br>s = snownlp<span class="hljs-selector-class">.SnowNLP</span>(text1)<br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;\n&#x27;</span>)</span></span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;情感分析&#x27;</span>,s.sentiments)</span></span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;\n&#x27;</span>)</span></span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;中文分词&#x27;</span>,s.words)</span></span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;\n&#x27;</span>)</span></span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;转成拼音&#x27;</span>,s.pinyin)</span></span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;\n&#x27;</span>)</span></span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;词频&#x27;</span>,s.tf)</span></span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;\n&#x27;</span>)</span></span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;提取三个关键词&#x27;</span>,s.keywords(<span class="hljs-number">3</span>)</span></span>)<br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;\n&#x27;</span>)</span></span><br><br>text2 = <span class="hljs-string">&#x27;快递慢到死，客服态度不好，退款！&#x27;</span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;&#123;:-^50&#125;&#x27;</span>.format(<span class="hljs-string">&#x27;测试文本：&#x27;</span>+text2)</span></span>)<br>s = snownlp<span class="hljs-selector-class">.SnowNLP</span>(text2)<br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;\n&#x27;</span>)</span></span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;情感分析&#x27;</span>,s.sentiments)</span></span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;\n&#x27;</span>)</span></span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;中文分词&#x27;</span>,s.words)</span></span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;\n&#x27;</span>)</span></span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;转成拼音&#x27;</span>,s.pinyin)</span></span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;\n&#x27;</span>)</span></span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;词频&#x27;</span>,s.tf)</span></span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;\n&#x27;</span>)</span></span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">&#x27;提取三个关键词&#x27;</span>,s.keywords(<span class="hljs-number">3</span>)</span></span>)<br></code></pre></div></td></tr></table></figure>
+
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/python/">python</a>
+                    
+                  </div>
+                
+              </div>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/10/03/%E7%88%AC%E8%8D%AF%E7%9B%91%E5%90%8D%E4%B8%8B%E5%85%AC%E5%8F%B8/">
+                        <span class="hidden-mobile">爬药监名下公司</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href=" " target="_blank" rel="nofollow noopener"><span>科研民工</span></a> <i class="iconfont icon-love"></i> <a href=" " target="_blank" rel="nofollow noopener"><span>林国鹏</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
