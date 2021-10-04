@@ -23,15 +23,15 @@
 <meta property="og:site_name" content="林国鹏">
 <meta property="og:description" content="注：参考来自网络，如侵权则删。 #素材 #链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1lxjnGAb3LLYabmG5wiFi-A#提取码：1111–来自百度网盘超级会员V3的分享 ##对应于上述 A-F 6 个模块，本地版的命令行操作示例如下 #A，设置 LEfSe 的数据格式，详情 format_input.py -h #-c，指定 class 的行（必须指定）；-s，指定 sub">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2021/09/29/lefse/1.png">
-<meta property="og:image" content="http://example.com/2021/09/29/lefse/2.png">
-<meta property="og:image" content="http://example.com/2021/09/29/lefse/3.png">
-<meta property="og:image" content="http://example.com/2021/09/29/lefse/4.png">
+<meta property="og:image" content="http://example.com/lefse/1.png">
+<meta property="og:image" content="http://example.com/lefse/2.png">
+<meta property="og:image" content="http://example.com/lefse/3.png">
+<meta property="og:image" content="http://example.com/lefse/4.png">
 <meta property="article:published_time" content="2021-09-29T09:05:24.000Z">
 <meta property="article:modified_time" content="2021-09-29T09:36:09.388Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/2021/09/29/lefse/1.png">
+<meta name="twitter:image" content="http://example.com/lefse/1.png">
   
   <title>lefse - 林国鹏</title>
 
@@ -256,10 +256,10 @@
 <p>#-l 2.0，设定 LDA 得分的对数值的最低阈值为 2</p>
 <figure class="highlight reasonml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs reasonml">run_lefse.py <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">A_lefse_test</span>.</span></span><span class="hljs-keyword">in</span> <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">B_lefse_test</span>.</span></span>res -l <span class="hljs-number">2.0</span><br></code></pre></div></td></tr></table></figure>
 
-<p><img src="/2021/09/29/lefse/1.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/./lefse/1.png" srcset="/img/loading.gif" lazyload></p>
 <figure class="highlight reasonml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs reasonml">run_lefse.py <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">A_lefse_test</span>.</span></span><span class="hljs-keyword">in</span> <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">B_lefse_test</span>.</span></span>res -l <span class="hljs-number">4.0</span><br></code></pre></div></td></tr></table></figure>
 
-<p><img src="/2021/09/29/lefse/2.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/./lefse/2.png" srcset="/img/loading.gif" lazyload></p>
 <p>#备注：对于 B 的输出，我们可以选择从中删一些不必要（不显著）的数据，</p>
 <p>#以增强 C、D、E 作图时的美感</p>
 <p>#C，绘制 LEfSe 得分值，详情 plot_res.py -h</p>
@@ -271,8 +271,8 @@
 <p>#注：版本问题，有时 plot_cladogram.py 命令找不到，可能为 lefse-plot_cladogram.py</p>
 <figure class="highlight reasonml"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs reasonml">plot_cladogram.py <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">B_lefse_test</span>.</span></span>res <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">D_lefse_test</span>.</span></span>cladogram.pdf --format pdf --dpi <span class="hljs-number">150</span><br></code></pre></div></td></tr></table></figure>
 
-<p><img src="/2021/09/29/lefse/3.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="/2021/09/29/lefse/4.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/./lefse/3.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/./lefse/4.png" srcset="/img/loading.gif" lazyload></p>
 <p>#E，单张图的展示略，直接使用 F 绘制所有的图</p>
 <p>#F，绘制差异特征，详情 plot_features.py -h</p>
 <p>#注：版本问题，有时 plot_features.py 命令找不到，可能为 lefse-plot_features.py</p>
